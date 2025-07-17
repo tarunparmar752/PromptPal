@@ -1,0 +1,72 @@
+<svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {
+      --prompt-pal-primary: #1a1a1a;
+      --prompt-pal-secondary: rgba(26, 26, 26, 0.6);
+      --prompt-pal-bg: rgba(26, 26, 26, 0.08);
+      --prompt-pal-border: rgba(26, 26, 26, 0.2);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --prompt-pal-primary: #ffffff;
+        --prompt-pal-secondary: rgba(255, 255, 255, 0.7);
+        --prompt-pal-bg: rgba(255, 255, 255, 0.1);
+        --prompt-pal-border: rgba(255, 255, 255, 0.3);
+      }
+    }
+    
+    .logo-container {
+      fill: var(--prompt-pal-bg);
+      stroke: var(--prompt-pal-border);
+    }
+    
+    .terminal-prompt {
+      stroke: var(--prompt-pal-primary);
+    }
+    
+    .cursor-line {
+      stroke: var(--prompt-pal-primary);
+    }
+    
+    .text-primary {
+      fill: var(--prompt-pal-primary);
+    }
+    
+    .text-secondary {
+      fill: var(--prompt-pal-secondary);
+    }
+  </style>
+  
+  <!-- Icon: Terminal/prompt symbol -->
+  <g transform="translate(20, 30)">
+    <!-- Rounded square container -->
+    <rect x="-14" y="-14" width="28" height="28" rx="6" 
+          class="logo-container" 
+          stroke-width="1.5"/>
+    
+    <!-- Terminal prompt symbol ">" -->
+    <path d="M-6,-4 L0,0 L-6,4" 
+          fill="none" 
+          class="terminal-prompt" 
+          stroke-width="2.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Cursor line -->
+    <line x1="2" y1="-3" x2="2" y2="3" 
+          class="cursor-line" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+  </g>
+  
+  <!-- Typography with perfect spacing -->
+  <text x="50" y="38" 
+        font-family="Inter, SF Pro Display, system-ui, sans-serif" 
+        font-size="24" 
+        font-weight="600" 
+        class="text-primary" 
+        letter-spacing="-0.02em">
+    Prompt<tspan font-weight="300" class="text-secondary">Pal</tspan>
+  </text>
+</svg>

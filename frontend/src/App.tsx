@@ -1,14 +1,13 @@
-import './App.css'
-import { Button } from './components/ui/button'
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "@/components/common/Navbar";
 
 function App() {
-
   return (
-    <>
-      <h3>Welcome to PromptPal!!</h3>
-      <Button>Button</Button>
-    </>
-  )
+    <Routes>
+      <Route path="/" element={<Navbar />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
