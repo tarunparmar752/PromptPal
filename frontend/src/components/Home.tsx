@@ -1,5 +1,4 @@
 import HeroSearch from "./common/hero-search";
-import Navbar from "./common/Navbar";
 import PromptCard from "./PromptCard";
 
 export default function Home() {
@@ -94,8 +93,7 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
-      <section className="flex flex-col items-center justify-cente mt-10">
+      <section className="flex flex-col items-center justify-center mt-10">
         <h3 className="text-6xl font-semibold dark:text-gray-200">
           Discover AI prompts
         </h3>
